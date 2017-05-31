@@ -8,8 +8,8 @@
 	<version>0.1.0</version>
 	<packaging>war</packaging>
 	<properties>
-		<app.id>file-parser</app.id>
-		<app.version>file-parser</app.version>
+		<app.id>csd-automation</app.id>
+		<app.version>file-demo</app.version>
 		<appengine.version>1.9.50</appengine.version>
 		<appengine.plugin.version>1.9.50</appengine.plugin.version>
 		<gcloud.plugin.version>135</gcloud.plugin.version>
