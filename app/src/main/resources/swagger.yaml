@@ -1,0 +1,19 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: File Parser API
+  description: Responsible for  reading  the dispute file and prepare the chargeback records
+  license:
+    name: Copyright GPN 2017
+    url: https://www.globalpaymentsinc.com/
+host: localhost:8080
+basePath: /v1
+
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+  
