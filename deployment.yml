@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: file-demo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: file-demo
+    spec:
+      containers:
+      - name: file-demo
+        image: gcr.io/csd-automation/csd/csd-image:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+        - name: gcr.io
