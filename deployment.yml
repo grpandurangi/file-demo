@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: file-demo
 spec:
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -11,9 +11,9 @@ spec:
     spec:
       containers:
       - name: file-demo
-        image: gcr.io/csd-automation/csd/csd-image:1.0
+        image: gcr.io/omega-signifier-168912/filedemo/file-demo:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 9090
       imagePullSecrets:
         - name: gcr.io
