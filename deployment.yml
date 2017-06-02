@@ -1,17 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: file-demo
+  name: my-file-demo
 spec:
   replicas: 2
   template:
     metadata:
       labels:
-        app: file-demo
+        app: my-file-demo
     spec:
       containers:
-      - name: file-demo
-        image: gcr.io/omega-signifier-168912/filedemo/file-demo:latest
+      - name: my-file-demo
+        image: gcr.io/csd-automation/filedemo/file-demo:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 9090
