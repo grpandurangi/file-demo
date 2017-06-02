@@ -6,3 +6,5 @@ docker push gcr.io/csd-automation/filedemo/file-demo:latest
 gcloud config set compute/zone us-east1-d
 gcloud config set project csd-automation
 
+#/usr/lib/google-cloud-sdk/bin/kubectl delete deployments my-file-demo
+
