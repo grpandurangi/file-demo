@@ -7,7 +7,7 @@ gcloud config set compute/zone us-east1-d
 gcloud config set project csd-automation
 
 #/usr/lib/google-cloud-sdk/bin/kubectl delete deployments my-file-demo
-kubectl get pods
-kubectl set image deployment/my-file-demo my-file-demo=gcr.io/csd-automation/filedemo/file-demo:latest
-kubectl set image deployment/my-file-demo my-file-demo=gcr.io/csd-automation/filedemo/file-demo
-kubectl get pods
+/usr/lib/google-cloud-sdk/bin/kubectl get pods
+/usr/lib/google-cloud-sdk/bin/kubectl set image deployment/my-file-demo my-file-demo=gcr.io/csd-automation/filedemo/file-demo:latest
+/usr/lib/google-cloud-sdk/bin/kubectl set image deployment/my-file-demo my-file-demo=gcr.io/csd-automation/filedemo/file-demo
+/usr/lib/google-cloud-sdk/bin/kubectl get pods
