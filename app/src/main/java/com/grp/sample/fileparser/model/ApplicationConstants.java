@@ -11,7 +11,7 @@ package com.grp.sample.fileparser.model;
 
 public interface ApplicationConstants {
 
-	public static final String APPLICATION_NAME = "File Parser Application";
+	public static final String APPLICATION_NAME = "File Demo Application";
 	public static final String MESSAGE_ENTERED = "Message entered";
 	public static final String MISSING_MESSAGE_PARAMETER = "'message' query parmeter is missing in URL";
 }
