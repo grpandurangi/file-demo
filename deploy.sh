@@ -20,7 +20,8 @@ if [[ "$?" -eq "0" ]]; then
 
 else
 
-/usr/lib/google-cloud-sdk/bin/kubectl expose deployment my-file-demo --type=LoadBalancer --name=my-file-demo-service --external-ip="104.197.129.72"
+/usr/lib/google-cloud-sdk/bin/kubectl apply -f service.yml
+#/usr/lib/google-cloud-sdk/bin/kubectl expose deployment my-file-demo --type=LoadBalancer --name=my-file-demo-service --external-ip="104.197.129.72"
 
 fi
 
