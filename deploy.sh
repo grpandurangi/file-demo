@@ -5,7 +5,7 @@ gcloud config set project csd-automation
 /usr/lib/google-cloud-sdk/bin/kubectl apply -f deployment.yml
 /usr/lib/google-cloud-sdk/bin/kubectl get service my-file-demo-service
 
-if [[ "$?" eq "0" ]]; then
+if [[ "$?" -eq "0" ]]; then
 
 /usr/lib/google-cloud-sdk/bin/kubectl get pods
 /usr/lib/google-cloud-sdk/bin/kubectl set image deployment/my-file-demo my-file-demo=gcr.io/csd-automation/filedemo/file-demo:latest
