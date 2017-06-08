@@ -11,11 +11,19 @@ if [[ "$?" -eq "0" ]]; then
 /usr/lib/google-cloud-sdk/bin/kubectl apply -f deployment.yml
 /usr/lib/google-cloud-sdk/bin/kubectl get service my-file-demo-service
 
-if [[ "$?" -ne "0" ]]; then
+if [[ "$?" -eq "0" ]]; then
+
+/usr/lib/google-cloud-sdk/bin/kubectl get pods
+/usr/lib/google-cloud-sdk/bin/kubectl set image deployment/my-file-demo my-file-demo=gcr.io/csd-automation/filedemo/file-demo:latest
+/usr/lib/google-cloud-sdk/bin/kubectl set image deployment/my-file-demo my-file-demo=gcr.io/csd-automation/filedemo/file-demo
+/usr/lib/google-cloud-sdk/bin/kubectl get pods
+
+else
 
 /usr/lib/google-cloud-sdk/bin/kubectl apply -f service.yml
 #/usr/lib/google-cloud-sdk/bin/kubectl expose deployment my-file-demo --type=LoadBalancer --name=my-file-demo-service ;
 
+#--load-balancer-ip="104.197.129.72"
 
 fi
 
