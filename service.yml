@@ -6,7 +6,7 @@ metadata:
   name: my-file-demo-service
 spec:
   type: LoadBalancer
-  loadBalancerIP: 104.196.96.183
+#  loadBalancerIP: 104.196.96.183
   ports:
     # The port that this service should serve on.
     - port: 9090
