@@ -27,6 +27,8 @@ else
 
 fi
 
+/usr/lib/google-cloud-sdk/bin/kubectl autoscale deployment my-file-demo --cpu-percent=50 --min=3 --max=10
+
 else
 
 echo "Google Container Engine is not created";
