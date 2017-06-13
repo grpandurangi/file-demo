@@ -1,5 +1,6 @@
 #!/bin/bash
 
+##
 gcloud config set compute/zone us-east1-d
 gcloud config set project csd-automation
 #gcloud container clusters create file-demo --num-nodes 1
