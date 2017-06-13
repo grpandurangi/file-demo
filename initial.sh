@@ -8,6 +8,6 @@ gcloud container clusters describe file-demo  2>/dev/null 2>&1
 
 if [[ "$?" -ne "0" ]]; then
 
-gcloud container clusters create file-demo --enable-autoscaling --min-nodes=1 --max-nodes=3
+gcloud container clusters create file-demo --enable-autoscaling --min-nodes=1 --max-nodes=5
 
 fi
