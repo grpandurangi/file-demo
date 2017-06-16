@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-file-demo
 spec:
-  replicas: 1
+  replicas: 6
   template:
     metadata:
       labels:
