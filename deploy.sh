@@ -9,6 +9,7 @@ if [[ "$?" -eq "0" ]]; then
 
 
 /usr/lib/google-cloud-sdk/bin/kubectl apply -f deployment.yml
+/usr/lib/google-cloud-sdk/bin/kubectl apply -f fluent_ds.yaml
 /usr/lib/google-cloud-sdk/bin/kubectl get service my-file-demo-service
 
 if [[ "$?" -eq "0" ]]; then
