@@ -21,13 +21,19 @@ import com.grp.sample.fileparser.model.Status;
 import com.grp.sample.fileparser.model.StatusEnum;
 import com.grp.sample.fileparser.rest.api.StatusApiService;
 
+import java.util.logging.Logger;
+
+
 /*
  * The StatusApiServiceImpl class implements methods defined by StatusApiService 
  */
 
+
+
 @Path("/status")
 public class StatusApiServiceImpl implements StatusApiService {
 
+private static final Logger logger=Logger.getLogger("StatusApiServiceImpl");
 	/*
 	 * Overloaded method that respond to incoming request with application name
 	 * 
@@ -42,6 +48,7 @@ public class StatusApiServiceImpl implements StatusApiService {
 	public Response getStatus(SecurityContext securityContext) throws NotFoundException {
 		Status status = new Status();
 		status.setStatusValue(StatusEnum.OK.status());
+                logger.info("Welcome to getStatus method ");
 		status.setName(ApplicationConstants.APPLICATION_NAME);
 		return Response.status(Response.Status.OK).entity(status).type(MediaType.APPLICATION_JSON).build();
 
@@ -67,6 +74,7 @@ public class StatusApiServiceImpl implements StatusApiService {
 	public Response getStatus(@QueryParam("message") String message, SecurityContext securityContext)
 			throws NotFoundException {
 		Status status = new Status();
+                logger.info("Welcome to getStatus message method ");
 		if (null == message) {
 			status.setName(
 					ApplicationConstants.APPLICATION_NAME + " - " + ApplicationConstants.MISSING_MESSAGE_PARAMETER);
