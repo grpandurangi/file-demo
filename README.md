@@ -25,3 +25,5 @@ Given the jar/war has already been generated:
 ```bash
 execute mvn test on acceptance-tests folder 
 ```
+
+Updating the QA
