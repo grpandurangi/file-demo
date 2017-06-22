@@ -27,3 +27,6 @@ execute mvn test on acceptance-tests folder
 ```
 
 Updating the QA
+
+
+Updated Development READMe to merget at 1:40pm
